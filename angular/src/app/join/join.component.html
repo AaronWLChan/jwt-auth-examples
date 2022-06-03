@@ -1,0 +1,19 @@
+<div>
+    <h1>Join</h1>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+
+        <label>Email</label>
+        <input formControlName="email" type="email" >
+
+        <label>Password</label>
+        <input formControlName="password" type="password" >
+
+        <label>Verify Password</label>
+        <input formControlName="verifyPassword" type="password" >
+
+        <button type="submit" [disabled]="!form.valid" >Join</button>
+
+    </form>
+
+</div>

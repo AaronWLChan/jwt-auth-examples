@@ -1,0 +1,11 @@
+<div *ngIf="user">
+    <h1>For Authorized Users Only!</h1>
+
+    <p>ID: {{ user._id }}</p>
+    <p>My Email: {{ user.email }}</p>
+    <p>My Name: {{ user.name }}</p>
+</div>
+
+<div *ngIf="!user">
+    <h1>No user data...</h1>
+</div>

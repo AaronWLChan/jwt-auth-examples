@@ -1,0 +1,20 @@
+<div>
+
+  <ul>
+    <li><a routerLink="/">Home</a></li>
+
+    <ng-container *ngIf="!authService.isAuthenticated">
+      <li><a routerLink="/join">Join</a></li>
+      <li><a routerLink="/login">Login</a></li>
+    </ng-container>
+
+    <ng-container *ngIf="authService.isAuthenticated" >
+      <li><a routerLink="/auth-only">Auth Only</a></li>
+      <li><button (click)="logout()">Logout</button></li>
+    </ng-container>
+
+  </ul> 
+
+</div>
+
+<router-outlet></router-outlet>
